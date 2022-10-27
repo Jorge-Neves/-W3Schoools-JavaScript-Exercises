@@ -9,7 +9,7 @@ const Icon = styled.button`
   position: absolute;
   z-index: 10;
   top: 25px;
-  right: 25px;
+  left: 25px;
 `;
 
 const MenuIcon: FC<MenuIconProps> = ({ displayHandler }) => {

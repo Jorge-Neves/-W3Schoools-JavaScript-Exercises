@@ -1,6 +1,10 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
+interface MenuProps {
+  displayHandler: (value: boolean) => void;
+}
+
 const Container = styled.div`
   position: absolute;
   display: flex;
@@ -21,12 +25,12 @@ const CloseButton = styled.button`
   right: 25px;
 `;
 
-const Menu: FC = () => {
+const Menu: FC<MenuProps> = ({ displayHandler }) => {
   return (
     <Container>
-      <CloseButton type="button" onClick={() => displayHandler(true)}>
+      <CloseButton type="button" onClick={() => displayHandler(false)}>
         {' '}
-        Menu{' '}
+        Close{' '}
       </CloseButton>
       <span>Menu</span>
     </Container>
