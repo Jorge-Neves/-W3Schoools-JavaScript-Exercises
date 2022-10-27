@@ -24,6 +24,13 @@
   color: white;
 }
 
+.editor {
+  min-width: 99.7%;
+  width: auto;
+  height: 100vh;
+  overflow-y: hidden !important;
+}
+
 .App-link {
   color: #61dafb;
 }
