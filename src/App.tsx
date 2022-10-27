@@ -6,9 +6,10 @@ import Landing from './pages/Landing';
 import Homepage from './pages/Homepage';
 import Lessons from './pages/Lessons';
 import Menu from './components/Menu';
+import MenuIcon from './components/MenuIcon';
 
 const App: FC = () => {
-  const [shouldDisplayMenu, setShouldDisplayMenu] = useState<boolean>();
+  const [shouldDisplayMenu, setShouldDisplayMenu] = useState<boolean>(false);
 
   const menuDisplayHandler = (value: boolean) => {
     setShouldDisplayMenu(value);
@@ -23,7 +24,7 @@ const App: FC = () => {
           <Route path="/lessons" element={<Lessons />} />
         </Routes>
       </Router>
-      {!shouldDisplayMenu && <MenuIcon />}
+      {!shouldDisplayMenu && <MenuIcon displayHandler={menuDisplayHandler} />}
       {shouldDisplayMenu && <Menu />}
     </div>
   );
