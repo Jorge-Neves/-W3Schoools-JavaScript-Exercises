@@ -25,7 +25,7 @@ const App: FC = () => {
         </Routes>
       </Router>
       {!shouldDisplayMenu && <MenuIcon displayHandler={menuDisplayHandler} />}
-      {shouldDisplayMenu && <Menu />}
+      {shouldDisplayMenu && <Menu displayHandler={menuDisplayHandler} />}
     </div>
   );
 };
