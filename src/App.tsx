@@ -1,12 +1,19 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes, Route } from 'react-router';
 import './App.css';
 import Landing from './pages/Landing';
 import Homepage from './pages/Homepage';
 import Lessons from './pages/Lessons';
+import Menu from './components/Menu';
 
 const App: FC = () => {
+  const [shouldDisplayMenu, setShouldDisplayMenu] = useState<boolean>();
+
+  const menuDisplayHandler = (value: boolean) => {
+    setShouldDisplayMenu(value);
+  };
+
   return (
     <div className="screen">
       <Router>
@@ -16,6 +23,7 @@ const App: FC = () => {
           <Route path="/lessons" element={<Lessons />} />
         </Routes>
       </Router>
+      {shouldDisplayMenu && <Menu />}
     </div>
   );
 };
