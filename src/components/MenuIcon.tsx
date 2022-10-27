@@ -2,18 +2,13 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   z-index: 10;
   width: 100%;
   height: 100vh;
   background-color: #7d6e83;
-  color: white;
 `;
 
-const Menu: FC = () => {
+const MenuIcon: FC = () => {
   return (
     <Container>
       <span>Menu</span>
@@ -21,4 +16,4 @@ const Menu: FC = () => {
   );
 };
 
-export default Menu;
+export default MenuIcon;

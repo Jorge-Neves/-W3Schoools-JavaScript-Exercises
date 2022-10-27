@@ -23,6 +23,7 @@ const App: FC = () => {
           <Route path="/lessons" element={<Lessons />} />
         </Routes>
       </Router>
+      {!shouldDisplayMenu && <MenuIcon />}
       {shouldDisplayMenu && <Menu />}
     </div>
   );
